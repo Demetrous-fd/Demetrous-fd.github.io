@@ -1,6 +1,6 @@
 FROM --platform=i386 i386/alpine:latest
 
-RUN apk --no-cache add gcc fakeroot dbus base whiptail hexedit patch wamerican ucf file make dialog curl less netcat-openbsd bash curl unzip && rm -rf /var/cache/apk/*
+RUN apk --no-cache add  bash curl unzip netcat-openbsd && rm -rf /var/cache/apk/*
 
 # Add user
 RUN adduser -D user && echo "user:password" | chpasswd
